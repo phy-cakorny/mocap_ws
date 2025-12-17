@@ -1,3 +1,18 @@
+# Running MOCAP4ROS2 on the Workstation
+Activate the ROS environment and source installation packages: 
+- `cd ~/mocap_ws`
+- `eval "$(micromamba shell hook --shell bash)"`
+- `micromamba activate ros_env`
+Repeat for two terminal windows.
+
+Launch driver node (connects to Motive server): make sure Motive multicast is enabled (white stream icon)
+- In terminal 1: `ros2 launch mocap4r2_optitrack_driver optitrack2.launch.py`
+- In terminal 2: `ros2 lifecycle set /mocap4r2_optitrack_driver_node activate`
+
+To launch visualization step, in terminal 2: 
+- `python3 ~/mocap_ws/plot_marks.py`
+
+
 # MOCAP4ROS2 Workspace Setup Guide
 
 This workspace contains the MOCAP4ROS2 (Motion Capture for ROS 2) system, including support for OptiTrack motion capture systems.
