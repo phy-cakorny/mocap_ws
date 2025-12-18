@@ -42,8 +42,8 @@ This workspace contains the MOCAP4ROS2 (Motion Capture for ROS 2) system, includ
 ### Install micromamba
 
 Download and install the static `micromamba` executable using the installation script:
-```bash
-curl -L micro.mamba.pm/install.sh | bash
+`bash
+curl -L micro.mamba.pm/install.sh | bash `
 
 After installation, initialize your shell (e.g., bash, zsh) so that micromamba commands work correctly:
 `eval "$(micromamba shell hook --shell=bash)"`
