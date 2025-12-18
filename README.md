@@ -38,6 +38,26 @@ This workspace contains the MOCAP4ROS2 (Motion Capture for ROS 2) system, includ
   - `vcs` (version control system) tool
   - `rosdep` dependency manager
 
+## ROS environment setup
+
+### Install micromamba
+
+Download and install the static `micromamba` executable using the installation script:
+```bash
+curl -L micro.mamba.pm/install.sh | bash
+
+After installation, initialize your shell (e.g., bash, zsh) so that micromamba commands work correctly:
+`eval "$(micromamba shell hook --shell=bash)"`
+
+### Create a new ROS environment
+Do not install ROS packages in the base environment.
+Create a dedicated environment and specify both the conda-forge and robostack channels.
+
+`micromamba create -n ros_env -c conda-forge -c robostack ros-kilted-desktop`
+
+### Activate the environment
+`micromamba activate ros_env`
+
 ### Install ROS 2 Dependencies
 
 If you haven't already, install ROS 2 and the required tools:
