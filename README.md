@@ -1,7 +1,6 @@
 # Running MOCAP4ROS2 on the Workstation
 Activate the ROS environment and source installation packages: 
 - `cd ~/mocap_ws`
-- `eval "$(micromamba shell hook --shell bash)"`
 - `micromamba activate ros_env`
 Repeat for two terminal windows.
 
